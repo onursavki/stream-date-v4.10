@@ -105,6 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
         //"2025-03-30": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },      	
       	
         "2025-04-03": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>Red Dead Redemption.", time: "21:00" },
+      
+        "2025-04-05": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>Red Dead Redemption.", time: "21:00" },
+        "2025-04-05": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
+        "2025-04-06": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
+	    
+        "2025-04-07": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
+        "2025-04-08": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },	
+        "2025-04-09": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
+        "2025-04-11": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
     };
 
     // Özel günleri ve doğum günlerini tanımlayın
