@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	    
         "2025-04-07": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },	
         "2025-04-08": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
-        "2025-04-11": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
+        "2025-04-10": { note: "KICK Canlı Yayın.<br/>Sohbet,<br/>PUBG Mobile.", time: "21:00" },
     };
 
     // Özel günleri ve doğum günlerini tanımlayın
