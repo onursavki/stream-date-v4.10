@@ -143,32 +143,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Özel günleri geçmiş 10 yıl ve gelecek 10 yıl dahil olacak şekilde ekle
         for (let year = currentYear - 10; year <= currentYear + 10; year++) {
-            specialDays.forEach(day => {
-                const date = new Date(year, day.month, day.day);
-                const dateKey = date.toISOString().split('T')[0];
+    specialDays.forEach(day => {
+        const date = new Date(year, day.month, day.day);
+        const dateKey = date.toISOString().split('T')[0];
 
-                // Sembollerle düzenle
-                const symbol = day.type === "special" ? "✪" : "❖";
-                const styledNote = `<span style="font-size: 13px;position: relative;top: 1px;">${symbol}</span> ${day.note}`;
+        // Sembollerle düzenle
+        const symbol = day.type === "special" ? "✪" : "\uF3EB";
+        const styledNote = `<span style="font-size: 13px; position: relative; top: 1px;">${symbol}</span> ${day.note}`;
 
-                // Eğer aynı gün zaten bir not varsa, özel günü mevcut notların ÜSTÜNE ekle
-                if (notes[dateKey]) {
-                    notes[dateKey].note = ` 
-                        <span style="display: block; border-bottom: 1px solid #4a4a4a; padding-bottom: 5px; margin-bottom: 5px;top: -1px;position: relative;line-height: 12px;color:#919191">
+        if (notes[dateKey]) {
+            notes[dateKey].note = `
+                <span style="display: block; border-bottom: 1px solid #4a4a4a; padding-bottom: 5px; margin-bottom: 5px; top: -1px; position: relative; line-height: 12px; color:#919191">
+                    ${styledNote}
+                </span>
+                ${notes[dateKey].note}`;
+        } else {
+            notes[dateKey] = {
+                note: `<span style="display: block; border-bottom: 1px solid #4a4a4a; padding-bottom: 5px; margin-bottom: 5px; top: -1px; position: relative; line-height: 12px;">
                             ${styledNote}
-                        </span>
-                        ${notes[dateKey].note}`;
-                } else {
-                    // Eğer o gün için not yoksa, yeni bir not oluştur
-                    notes[dateKey] = {
-                        note: `<span style="display: block; border-bottom: 1px solid #4a4a4a; padding-bottom: 5px; margin-bottom: 5px;top: -1px;position: relative;line-height: 12px;">
-                                    ${styledNote}
-                               </span>`,
-                        time: ""
-                    };
-                }
-            });
+                       </span>`,
+                time: ""
+            };
         }
+    });
+}
     }
 
     // Dinamik olarak çağır ve güncelle
