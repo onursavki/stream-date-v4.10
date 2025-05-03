@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Sembollerle düzenle
         const symbol = day.type === "special"
             ? `<span style="font-size: 13px; position: relative; top: 1px;">✪</span>`
-            : `<i class="bi bi-gift-fill" style="font-size: 13px; position: relative; top: 1px;"></i>`;
+            : `<i class="bi bi-gift-fill" style="font-size: 9px; position: relative;"></i>`;
         
         const styledNote = `${symbol} ${day.note}`;
 
