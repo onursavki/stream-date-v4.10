@@ -148,8 +148,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const dateKey = date.toISOString().split('T')[0];
 
         // Sembollerle düzenle
-        const symbol = day.type === "special" ? "✪" : "\uF3EB";
-        const styledNote = `<span style="font-size: 13px; position: relative; top: 1px;">${symbol}</span> ${day.note}`;
+        const symbol = day.type === "special"
+            ? `<span style="font-size: 13px; position: relative; top: 1px;">✪</span>`
+            : `<i class="bi bi-gift-fill" style="font-size: 13px; position: relative; top: 1px;"></i>`;
+        
+        const styledNote = `${symbol} ${day.note}`;
 
         if (notes[dateKey]) {
             notes[dateKey].note = `
